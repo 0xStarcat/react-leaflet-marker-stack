@@ -91,7 +91,7 @@ var MarkerStack = exports.MarkerStack = function (_Marker) {
 }(_reactLeaflet.Marker);
 
 MarkerStack.propTypes = {
-  position: _propTypes2.default.object,
+  position: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.array]),
   icons: _propTypes2.default.array
 };
 

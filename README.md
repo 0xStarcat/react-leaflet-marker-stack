@@ -9,11 +9,11 @@ Tested and supported with React-Leaflet 1.9.1. Not supported by React-Leaflet 2.
 ## Installation
 
 ```
-npm install react-leaflet-marker-stack@next
+npm install react-leaflet-marker-stack
 
 # or
 
-yarn add react-leaflet-marker-stack@next
+yarn add react-leaflet-marker-stack
 ```
 
 ## Usage Example
