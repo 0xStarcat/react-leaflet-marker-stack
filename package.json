@@ -1,7 +1,8 @@
 {
   "name": "react-leaflet-marker-stack",
-  "version": "0.1.5",
-  "description": "A plugin for React-Leaflet 1.x.x bringing over the leaflet-marker-stack plugin to render vertically stacked chip icons onto a Leaflet map.",
+  "version": "0.1.3",
+  "description":
+    "A plugin for React-Leaflet 1.x.x bringing over the leaflet-marker-stack plugin to render vertically stacked chip icons onto a Leaflet map.",
   "main": "dist/index.js",
   "author": "0xStarcat - https://github.com/0xStarcat",
   "license": "GPL-3.0",
