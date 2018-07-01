@@ -95,7 +95,7 @@ export default class App extends Component {
 
 ## Documentation
 
-`MarkerStack` JSX takes `position` and `icons` as git props.
+`MarkerStack` JSX takes `position` and `icons` as props.
 
 - `Position` can be an array of [Lat, Lon] values or an object of {lat: "-30.0", lng: "40.0"} values.
 
