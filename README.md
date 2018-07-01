@@ -16,14 +16,14 @@ yarn add react-leaflet-marker-stack@next
 
 # Usage Example
 
-[Marker Stack Example](./markerStackExample.png)
+![Marker Stack Example](./markerStackExample.png)
 
 ```
 import React, { Component } from 'react'
 import MarkerStack from 'react-leaflet-marker-stack'
 import { Map, TileLayer } from 'react-leaflet'
 
-import './App.css'
+// Be sure to include Leaflet's CSS file in main index.html file.
 
 export default class App extends Component {
   constructor() {
@@ -57,9 +57,10 @@ export default class App extends Component {
   }
 
   render() {
+    const mapStyle = { height: '500px', width: '500px' }
     const position = [this.state.lat, this.state.lng]
     return (
-      <Map className="App leaflet-container" center={position} ref="map" zoom={this.state.zoom}>
+      <Map style={mapStyle} center={position} ref="map" zoom={this.state.zoom}>
         <TileLayer
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
