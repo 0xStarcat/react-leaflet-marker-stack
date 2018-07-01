@@ -1,6 +1,6 @@
 # Description
 
-A plugin for (React-Leaflet 1.x.x)[https://github.com/PaulLeCam/react-leaflet] bringing over the original (leaflet-marker-stack)[https://github.com/IvanSanchez/Leaflet.Marker.Stack] plugin to render vertically stacked chip icons onto a (leaflet)[https://github.com/Leaflet/Leaflet] map.
+A plugin for [React-Leaflet 1.x.x](https://github.com/PaulLeCam/react-leaflet) bringing over the original [leaflet-marker-stack](https://github.com/IvanSanchez/Leaflet.Marker.Stack) plugin to render vertically stacked chip icons onto a [leaflet](https://github.com/Leaflet/Leaflet) map.
 
 Tested and supported with React-Leaflet 1.9.1. Not supported by React-Leaflet 2.x.x
 
@@ -85,6 +85,6 @@ export default class App extends Component {
 - iconAnchor: is an array containing [X, Y] offsets of the icon.
 - border: can be any CSS border property (ex: `red solid 1px`)
 
-Credit to (react-leaflet-distance-marker)[https://github.com/fullhdpixel/react-leaflet-distance-marker] for a largely copied react-leaflet plugin example
-) and (Leaflet.Marker.Stack)[https://github.com/IvanSanchez/Leaflet.Marker.Stack]
+Credit to [react-leaflet-distance-marker](https://github.com/fullhdpixel/react-leaflet-distance-marker) for a largely copied react-leaflet plugin example
+) and [Leaflet.Marker.Stack](https://github.com/IvanSanchez/Leaflet.Marker.Stack)
 ] for providing the source for the actual non-react plugin.
