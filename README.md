@@ -4,7 +4,7 @@ A plugin for [React-Leaflet 1.x.x](https://github.com/PaulLeCam/react-leaflet) b
 
 Tested and supported with React-Leaflet 1.9.1. Not supported by React-Leaflet 2.x.x
 
-(Code of Conduct)[./CODE_OF_CONDUCT.md]
+[Code of Conduct](./CODE_OF_CONDUCT.md)
 
 ## Installation
 
