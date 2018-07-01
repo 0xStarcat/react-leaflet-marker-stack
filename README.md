@@ -93,7 +93,7 @@ export default class App extends Component {
 
 ## Documentation
 
-`MarkerStack` JSX takes `position` and `icons` as props.
+`MarkerStack` JSX takes `position` and `icons` as git props.
 
 - `Position` can be an array of [Lat, Lon] values or an object of {lat: "-30.0", lng: "40.0"} values.
 
@@ -105,6 +105,10 @@ export default class App extends Component {
 - iconSize: is an array containing [Width, Height] values
 - iconAnchor: is an array containing [X, Y] offsets of the icon.
 - border: can be any CSS border property (ex: `red solid 1px`)
+
+## Contributing Help
+
+- Need help porting this over to React-Leaflet v2
 
 ## Credit
 
