@@ -18,7 +18,7 @@ yarn add react-leaflet-marker-stack
 
 ## Usage Example
 
-![Marker Stack Example](./markerStackExample.png)
+![Marker Stack Example](https://raw.githubusercontent.com/0xStarcat/react-leaflet-marker-stack/master/markerStackExample.png)
 
 ```
 import React, { Component } from 'react'
