@@ -40,7 +40,7 @@ export class MarkerStack extends Marker {
 }
 
 MarkerStack.propTypes = {
-  position: PropTypes.object,
+  position: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   icons: PropTypes.array
 }
 
