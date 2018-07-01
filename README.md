@@ -1,10 +1,10 @@
-# Description
+## Description
 
 A plugin for [React-Leaflet 1.x.x](https://github.com/PaulLeCam/react-leaflet) bringing over the original [leaflet-marker-stack](https://github.com/IvanSanchez/Leaflet.Marker.Stack) plugin to render vertically stacked chip icons onto a [leaflet](https://github.com/Leaflet/Leaflet) map.
 
 Tested and supported with React-Leaflet 1.9.1. Not supported by React-Leaflet 2.x.x
 
-# Installation
+## Installation
 
 ```
 npm install react-leaflet-marker-stack@next
@@ -14,7 +14,7 @@ npm install react-leaflet-marker-stack@next
 yarn add react-leaflet-marker-stack@next
 ```
 
-# Usage Example
+## Usage Example
 
 ![Marker Stack Example](./markerStackExample.png)
 
@@ -22,8 +22,6 @@ yarn add react-leaflet-marker-stack@next
 import React, { Component } from 'react'
 import MarkerStack from 'react-leaflet-marker-stack'
 import { Map, TileLayer } from 'react-leaflet'
-
-// Be sure to include Leaflet's CSS file in main index.html file.
 
 export default class App extends Component {
   constructor() {
@@ -37,7 +35,7 @@ export default class App extends Component {
     this.buildIcons = this.buildIcons.bind(this)
   }
 
-  buildIcons() {
+  buildRainbowIcons() {
     const data = [
       { amount: 1000 },
       { amount: 2000 },
@@ -56,16 +54,36 @@ export default class App extends Component {
     })
   }
 
+  buildIcons() {
+    const data = [
+      { amount: 1000 },
+      { amount: 2000 },
+      { amount: 3000 },
+      { amount: 4000 },
+      { amount: 5000 },
+      { amount: 6000 },
+      { amount: 7000 }
+    ]
+    return data.map(item => {
+      if (item.amount >= 6000) return { color: 'rgb(155, 155,255)', iconSize: [12, 8], iconAnchor: [6, 4] }
+      if (item.amount >= 3000) return { color: 'rgb(155, 140,255)', iconSize: [12, 8], iconAnchor: [6, 4] }
+      if (item.amount >= 1000) return { color: 'rgb(155, 100,255)', iconSize: [12, 8], iconAnchor: [6, 4] }
+    })
+  }
+
   render() {
-    const mapStyle = { height: '500px', width: '500px' }
     const position = [this.state.lat, this.state.lng]
+    const mapStyle = { height: '500px', width: '500px' }
     return (
       <Map style={mapStyle} center={position} ref="map" zoom={this.state.zoom}>
         <TileLayer
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <MarkerStack position={position} icons={this.buildIcons()} />
+        <MarkerStack position={position} icons={this.buildRainbowIcons()} />
+        <MarkerStack position={[51.507, -0.1]} icons={this.buildIcons()} />
+        <MarkerStack position={[51.501, -0.095]} icons={this.buildIcons()} />
+        <MarkerStack position={[51.511, -0.08]} icons={this.buildIcons()} />
       </Map>
     )
   }
@@ -80,11 +98,15 @@ export default class App extends Component {
 
 `Icons` should be an array consisting of a specific object shape to customize the icons.
 
+(example: `{ color: 'red', iconSize: [12, 8], iconAnchor: [6, 4] }`)
+
 - color: can be any CSS color property
 - iconSize: is an array containing [Width, Height] values
 - iconAnchor: is an array containing [X, Y] offsets of the icon.
 - border: can be any CSS border property (ex: `red solid 1px`)
 
-Credit to [react-leaflet-distance-marker](https://github.com/fullhdpixel/react-leaflet-distance-marker) for a largely copied react-leaflet plugin example
+## Credit
+
+Credit to [react-leaflet-distance-marker](https://github.com/fullhdpixel/react-leaflet-distance-marker) which I used as an example to create a React-Leaflet plugin and to
 ) and [Leaflet.Marker.Stack](https://github.com/IvanSanchez/Leaflet.Marker.Stack)
-] for providing the source for the actual non-react plugin.
+for providing the source for the actual non-react plugin.
