@@ -32,6 +32,7 @@ export default class App extends Component {
       zoom: 13
     }
 
+    this.buildRainbowIcons = this.buildRainbowIcons.bind(this)
     this.buildIcons = this.buildIcons.bind(this)
   }
 
@@ -92,11 +93,11 @@ export default class App extends Component {
 
 ## Documentation
 
-`<MarkerStack position={} icons={}/>` takes `position` and `icons` props.
+`MarkerStack` JSX takes `position` and `icons` as props.
 
-`Position` can be an array of [Lat, Lon] values or an object of {lat: "-30.0", lng: "40.0"} values.
+- `Position` can be an array of [Lat, Lon] values or an object of {lat: "-30.0", lng: "40.0"} values.
 
-`Icons` should be an array consisting of a specific object shape to customize the icons.
+- `Icons` should be an array consisting of a specific object shape to customize the icons.
 
 (example: `{ color: 'red', iconSize: [12, 8], iconAnchor: [6, 4] }`)
 
